@@ -1,4 +1,16 @@
 # tezt-summarizer-project
+
+*Company* - *CODTECH IT SOLUTIONS*
+
+*NAME* - *NISHEETH CHANDRA*
+
+*INTERN ID* - **
+
+*DOMAIN* - *ARTIFICIAL INTELLIGENCE*
+
+*DURATION* - *4 WEEKS*
+
+*MENTOR* - **
 ## Text Summarization using Custom TextRank in Python
 
 This project implements **extractive text summarization** using a custom-built version of the **TextRank algorithm**, entirely without external NLP libraries like spaCy or NLTK. It uses TF-IDF and cosine similarity to build a sentence similarity graph and applies PageRank to extract the most important sentences.
