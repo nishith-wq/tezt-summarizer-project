@@ -1,31 +1,31 @@
 # tezt-summarizer-project
-# 🧠 Text Summarization using Custom TextRank in Python
+Text Summarization using Custom TextRank in Python
 
 This project implements **extractive text summarization** using a custom-built version of the **TextRank algorithm**, entirely without external NLP libraries like spaCy or NLTK. It uses TF-IDF and cosine similarity to build a sentence similarity graph and applies PageRank to extract the most important sentences.
 
 ---
 
-## 🔍 Features
+Features
 
-- ✅ Custom sentence and word tokenization using regular expressions  
-- ✅ Built-in stopword removal  
-- ✅ TF-IDF based sentence vectorization  
-- ✅ Cosine similarity matrix between sentences  
-- ✅ Graph-based ranking using PageRank  
-- ✅ Clean extractive summary output  
-- ✅ No external NLP dependencies  
+- Custom sentence and word tokenization using regular expressions  
+- Built-in stopword removal  
+- TF-IDF based sentence vectorization  
+- Cosine similarity matrix between sentences  
+- Graph-based ranking using PageRank  
+- Clean extractive summary output  
+- No external NLP dependencies  
 
 ---
 
-## 🚀 How It Works
+How It Works
 
-1. **Sentence Tokenization**  
+1. Sentence Tokenization - 
    Breaks the input text into sentences using a smart regex.
 
-2. **Word Tokenization**  
+2. Word Tokenization -  
    Converts each sentence to lowercase words, removing stopwords and punctuation.
 
-3. **TF-IDF Matrix Construction**  
+3. TF-IDF Matrix Construction - 
    - **TF (Term Frequency)**: Measures word frequency in a sentence.  
    - **IDF (Inverse Document Frequency)**: Measures word uniqueness across all sentences.  
    - Each sentence becomes a TF-IDF vector.
