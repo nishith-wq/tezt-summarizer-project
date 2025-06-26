@@ -1,11 +1,11 @@
 # tezt-summarizer-project
-Text Summarization using Custom TextRank in Python
+## Text Summarization using Custom TextRank in Python
 
 This project implements **extractive text summarization** using a custom-built version of the **TextRank algorithm**, entirely without external NLP libraries like spaCy or NLTK. It uses TF-IDF and cosine similarity to build a sentence similarity graph and applies PageRank to extract the most important sentences.
 
 ---
 
-Features
+## Features
 
 - Custom sentence and word tokenization using regular expressions  
 - Built-in stopword removal  
@@ -17,15 +17,15 @@ Features
 
 ---
 
-How It Works
+## How It Works
 
-1. Sentence Tokenization - 
+1. **Sentence Tokenization** - 
    Breaks the input text into sentences using a smart regex.
 
-2. Word Tokenization -  
+2. **Word Tokenization**  
    Converts each sentence to lowercase words, removing stopwords and punctuation.
 
-3. TF-IDF Matrix Construction - 
+3. **TF-IDF Matrix Construction**
    - **TF (Term Frequency)**: Measures word frequency in a sentence.  
    - **IDF (Inverse Document Frequency)**: Measures word uniqueness across all sentences.  
    - Each sentence becomes a TF-IDF vector.
@@ -41,7 +41,7 @@ How It Works
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - Python standard libraries: `re`, `collections`, `math`, `heapq`
 - `numpy` for similarity matrix
@@ -49,7 +49,7 @@ How It Works
 
 ---
 
-## 📌 Use Cases
+## Use Cases
 
 - Quick summarization of research papers or articles  
 - Content preview generation for long documents  
@@ -58,7 +58,7 @@ How It Works
 
 ---
 
-## 💡 Why This is Cool
+## Why This is Cool
 
 - No fancy NLP libraries – everything built from scratch  
 - Great educational value for understanding NLP fundamentals  
@@ -67,7 +67,7 @@ How It Works
 
 ---
 
-## 📎 Example Usage
+## Example Usage
 
 ```python
 from summarizer import text_summarizer
