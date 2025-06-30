@@ -10,7 +10,7 @@
 
 *DURATION* - *4 WEEKS*
 
-*MENTOR* - **
+*MENTOR* - *NEELA SANTHOSH*
 ## Text Summarization using Custom TextRank in Python
 
 This project implements **extractive text summarization** using a custom-built version of the **TextRank algorithm**, entirely without external NLP libraries like spaCy or NLTK. It uses TF-IDF and cosine similarity to build a sentence similarity graph and applies PageRank to extract the most important sentences.
