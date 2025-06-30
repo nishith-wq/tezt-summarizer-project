@@ -1,6 +1,6 @@
 # tezt-summarizer-project
 
-*Company* - *CODTECH IT SOLUTIONS*
+*COMPANY* - *CODTECH IT SOLUTIONS*
 
 *NAME* - *NISHEETH CHANDRA*
 
