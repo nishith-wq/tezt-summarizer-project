@@ -11,79 +11,33 @@
 *DURATION* - *4 WEEKS*
 
 *MENTOR* - *NEELA SANTHOSH*
-## Text Summarization using Custom TextRank in Python
 
-This project implements **extractive text summarization** using a custom-built version of the **TextRank algorithm**, entirely without external NLP libraries like spaCy or NLTK. It uses TF-IDF and cosine similarity to build a sentence similarity graph and applies PageRank to extract the most important sentences.
+# Text Summarization Using NLP and TextRank
 
----
+## Overview
 
-## Features
+This project implements an unsupervised extractive text summarization system using Natural Language Processing (NLP) techniques in Python. It showcases how raw textual data can be parsed, processed, and distilled into concise summaries using an algorithmic approach. The core model draws inspiration from the TextRank algorithm, which is based on Google’s PageRank concept, adapted for natural language processing. It uses word embeddings and graph-based ranking to identify the most significant sentences in a document.
 
-- Custom sentence and word tokenization using regular expressions  
-- Built-in stopword removal  
-- TF-IDF based sentence vectorization  
-- Cosine similarity matrix between sentences  
-- Graph-based ranking using PageRank  
-- Clean extractive summary output  
-- No external NLP dependencies  
+The primary objective of this notebook is to demonstrate how a well-structured NLP pipeline can be used to summarize complex textual data while preserving semantic integrity. The process utilizes Python libraries such as SpaCy, string processing, and NetworkX for building the graph model.
 
----
+## Problem Statement
 
-## How It Works
+In the digital age, we are constantly bombarded with large volumes of textual data—be it news articles, research papers, or social media posts. Human attention, however, is a limited resource. There arises a need for systems that can automatically generate accurate and coherent summaries of large texts to facilitate quick understanding and decision-making.
 
-1. **Sentence Tokenization** - 
-   Breaks the input text into sentences using a smart regex.
+## Objectives
 
-2. **Word Tokenization**  
-   Converts each sentence to lowercase words, removing stopwords and punctuation.
+- Tokenize and preprocess input text
+- Eliminate irrelevant tokens such as punctuation and stop words
+- Calculate word frequencies for significance scoring
+- Score sentences based on cumulative word importance
+- Use graph-based ranking (TextRank) to select the most informative sentences
+- Generate a coherent summary as output
 
-3. **TF-IDF Matrix Construction**
-   - **TF (Term Frequency)**: Measures word frequency in a sentence.  
-   - **IDF (Inverse Document Frequency)**: Measures word uniqueness across all sentences.  
-   - Each sentence becomes a TF-IDF vector.
+## Methodology
 
-4. **Cosine Similarity Matrix**  
-   Builds an `n x n` matrix where each cell holds the cosine similarity between two sentence vectors.
+### 1. **Text Preprocessing**
+The input text is first cleaned by removing newline characters, punctuation, and common stop words (like "the", "and", "is") which do not contribute meaningfully to the summarization task. This step uses SpaCy’s tokenization features and Python’s built-in `string` module.
 
-5. **PageRank Algorithm**  
-   Constructs a graph where each node is a sentence. Edges are weighted by cosine similarity. PageRank determines the most important sentences.
+### 2. **Word Frequency Calculation**
+Each word in the cleaned text is analyzed to calculate its frequency of occurrence. A dictionary is created to hold the word counts, which are later normalized to ensure fair comparison. These frequencies are used to assign weigh
 
-6. **Summary Extraction**  
-   Selects top-ranked sentences and joins them in the order of appearance to produce a final summary.
-
----
-
-## Tech Stack
-
-- Python standard libraries: `re`, `collections`, `math`, `heapq`
-- `numpy` for similarity matrix
-- `networkx` for PageRank implementation
-
----
-
-## Use Cases
-
-- Quick summarization of research papers or articles  
-- Content preview generation for long documents  
-- NLP learning tools for students and beginners  
-- Lightweight summarization for embedded/edge applications
-
----
-
-## Why This is Cool
-
-- No fancy NLP libraries – everything built from scratch  
-- Great educational value for understanding NLP fundamentals  
-- Lightweight and portable for small systems  
-- Easily extensible for multi-document summarization
-
----
-
-## Example Usage
-
-```python
-from summarizer import text_summarizer
-
-text = """Natural language processing (NLP) is a subfield of artificial intelligence..."""
-summary = text_summarizer(text, num_sentences=3)
-print(summary)
